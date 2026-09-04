@@ -71,6 +71,39 @@
     color: var(--muted);
     opacity: 0.7;
   }
+  .building {
+    font-size: 14px;
+    color: var(--text);
+    margin: -8px 0 24px;
+    line-height: 1.5;
+  }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 8px;
+    margin: 0 0 24px;
+  }
+  .links a, .links .soon {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(21,24,29,0.12);
+  }
+  .links a {
+    color: var(--accent);
+  }
+  .links a:hover {
+    background: rgba(53,65,92,0.08);
+  }
+  .links .soon {
+    color: var(--muted);
+    opacity: 0.55;
+    cursor: default;
+  }
 </style>
 </head>
 <body>
@@ -79,7 +112,14 @@
     <img class="mark" src="assets/favicon.svg" alt="Safva logo">
     <h1>Safva</h1>
     <p>I build usable AI products — not just models in a notebook.</p>
-    <div class="note">Portfolio in progress — check back soon.</div>
+    <p class="building">CS student and backend AI engineering intern, building toward a career in production AI systems. Case studies and capstone work land here as they ship.</p>
+    <nav class="links" aria-label="Links">
+      <a href="https://www.linkedin.com/in/fathima-safva-578294315" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/fsafva13-coder" target="_blank" rel="noopener">GitHub</a>
+      <a href="assets/safva-cv.pdf" target="_blank" rel="noopener">CV</a>
+      <span class="soon" title="Booking link coming soon">Let's talk (soon)</span>
+    </nav>
+    <div class="note">Portfolio in progress — Work, About, and Contact next.</div>
   </main>
 </body>
 </html>
