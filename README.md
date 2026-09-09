@@ -10,12 +10,13 @@
 
 Most portfolio sites either bury real work behind vague "I'm passionate about tech" copy, or list projects with no evidence they actually run. This one is built around a single claim — *I build usable AI products, not just models in a notebook* — and every page is designed to back it with real proof: real screenshots, real numbers, real repos, not stock imagery or filler. It's aimed at one reader (a hiring manager screening for backend AI/ML roles) and one action (get in touch about a role).
 
-The site is currently at its "empty but live" milestone: a real, reachable, mobile-tested URL with the full visual identity applied, ahead of Work/About/Contact going in over the following build weeks.
+The site is currently at its "empty but live" milestone: a real, reachable, mobile-tested URL with the full visual identity applied and working links out to real proof (LinkedIn, GitHub, CV, booking), ahead of Work/About/Contact going in over the following build weeks.
 
 ## Features
 
 - Responsive single-page layout, tested at both desktop and mobile widths
 - Full identity system applied from day one: type, palette, logo, and a judged (not just generated) background texture
+- Working links to LinkedIn, GitHub, a downloadable CV, and a booking link ("let's talk")
 - Zero build step — pure HTML/CSS, deploys straight from the repo
 - Structured to expand cleanly into a full site (Work, About, Contact) without a rebuild
 
@@ -55,11 +56,12 @@ python3 -m http.server 8000
 
 ```
 safva-portfolio/
-├── index.html              # Home — current milestone: name + claim, no other pages yet
+├── index.html              # Home — name, claim, positioning, and links; no other pages yet
 ├── assets/
 │   ├── favicon.svg         # Logo mark, also used as favicon
 │   ├── logo.svg             # Mark + wordmark, for the site header
-│   └── home-background.png  # Connective background texture (judged against a rejected candidate — see Learnings)
+│   ├── home-background.png  # Connective background texture (judged against a rejected candidate — see Learnings)
+│   └── safva-cv.pdf         # CV, linked directly from the Home page
 └── README.md
 ```
 
@@ -77,7 +79,7 @@ safva-portfolio/
 
 - Work page with three real case studies (SOLACE, mirae-luxe, BE-04 Tasks API), each backed by a real screenshot rather than a generated one
 - About page with a real photo and short bio
-- Contact page with a resume download and the site's one repeated call to action
+- Contact page as the site's one repeated call to action
 - Possible custom domain once the full site is live
 
 ## Demo
