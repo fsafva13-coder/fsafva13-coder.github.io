@@ -3,8 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Safva</title>
-<meta name="description" content="Get in touch with Safva.">
+<title>Safva — AI/ML Engineering Portfolio</title>
+<meta name="description" content="Safva — I build usable AI products, not just models in a notebook. CS student and backend AI engineering intern.">
+<link rel="canonical" href="https://fsafva13-coder.github.io/safva-portfolio/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fsafva13-coder.github.io/safva-portfolio/">
+<meta property="og:title" content="Safva — AI/ML Engineering Portfolio">
+<meta property="og:description" content="I build usable AI products — not just models in a notebook. CS student and backend AI engineering intern.">
+<meta property="og:image" content="https://fsafva13-coder.github.io/safva-portfolio/assets/social-preview.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Safva — AI/ML Engineering Portfolio">
+<meta name="twitter:description" content="I build usable AI products — not just models in a notebook.">
+<meta name="twitter:image" content="https://fsafva13-coder.github.io/safva-portfolio/assets/social-preview.jpg">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +29,7 @@
   * { box-sizing: border-box; }
   html, body {
     margin: 0;
-    min-height: 100%;
+    height: 100%;
     background: var(--bg);
     color: var(--text);
     font-family: 'Inter', -apple-system, sans-serif;
@@ -30,8 +40,7 @@
     justify-content: center;
     padding: 24px;
     position: relative;
-    overflow-x: hidden;
-    min-height: 100vh;
+    overflow: hidden;
   }
   .bg {
     position: absolute;
@@ -46,108 +55,64 @@
     position: relative;
     z-index: 1;
     text-align: center;
-    max-width: 480px;
-    width: 100%;
+    max-width: 520px;
   }
   .mark {
-    width: 40px;
-    height: 40px;
-    margin: 0 auto 18px;
+    width: 44px;
+    height: 44px;
+    margin: 0 auto 20px;
     display: block;
   }
   h1 {
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 600;
-    font-size: clamp(26px, 6vw, 34px);
-    margin: 0 0 10px;
+    font-size: clamp(28px, 6vw, 40px);
+    margin: 0 0 12px;
     letter-spacing: -0.01em;
   }
-  p.lead {
-    font-size: 15px;
+  p {
+    font-size: 16px;
     color: var(--muted);
     margin: 0 0 28px;
     line-height: 1.5;
   }
-  form {
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-  label {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--text);
-    margin-bottom: 6px;
-    display: block;
-  }
-  input, textarea {
-    width: 100%;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    color: var(--text);
-    background: #fff;
-    border: 1px solid rgba(21,24,29,0.14);
-    border-radius: 10px;
-    padding: 11px 14px;
-    outline: none;
-    transition: border-color 0.15s ease;
-  }
-  input:focus, textarea:focus {
-    border-color: var(--accent);
-  }
-  textarea {
-    resize: vertical;
-    min-height: 110px;
-  }
-  button {
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    color: #fff;
-    background: var(--accent);
-    border: none;
-    border-radius: 999px;
-    padding: 12px 22px;
-    cursor: pointer;
-    margin-top: 6px;
-    transition: opacity 0.15s ease;
-  }
-  button:hover {
-    opacity: 0.9;
-  }
-  button:disabled {
-    opacity: 0.6;
-    cursor: default;
-  }
-  .status {
-    font-size: 14px;
-    margin-top: 14px;
-    display: none;
-  }
-  .status.ok {
-    color: #2E7D46;
-    display: block;
-  }
-  .status.err {
-    color: #B3261E;
-    display: block;
-  }
-  .back {
-    display: inline-block;
-    margin-top: 26px;
+  .note {
     font-size: 13px;
     color: var(--muted);
-    text-decoration: none;
+    opacity: 0.7;
   }
-  .back:hover {
+  .building {
+    font-size: 14px;
+    color: var(--text);
+    margin: -8px 0 24px;
+    line-height: 1.5;
+  }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 8px;
+    margin: 0 0 24px;
+  }
+  .links a, .links .soon {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(21,24,29,0.12);
+  }
+  .links a {
     color: var(--accent);
   }
-  /* honeypot field, hidden from real visitors */
-  .hp {
-    position: absolute;
-    left: -9999px;
-    top: -9999px;
+  .links a:hover {
+    background: rgba(53,65,92,0.08);
+  }
+  .links .soon {
+    color: var(--muted);
+    opacity: 0.55;
+    cursor: default;
   }
 </style>
 </head>
@@ -155,72 +120,17 @@
   <img class="bg" src="assets/home-background.jpg" alt="">
   <main>
     <img class="mark" src="assets/favicon.svg" alt="Safva logo">
-    <h1>Get in touch</h1>
-    <p class="lead">Reach out about a role, a project, or a question — I read every message.</p>
-
-    <form id="contact-form">
-      <input type="hidden" name="access_key" value="552805d7-ab33-4958-8865-803f20d3ca69">
-      <input type="hidden" name="subject" value="New message from safva-portfolio.github.io">
-      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
-
-      <div>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div>
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
-      </div>
-      <button type="submit" id="submit-btn">Send message</button>
-      <div class="status" id="status"></div>
-    </form>
-
-    <a class="back" href="index.html">&larr; Back to home</a>
+    <h1>Safva</h1>
+    <p>I build usable AI products — not just models in a notebook.</p>
+    <p class="building">CS student and backend AI engineering intern, building toward a career in production AI systems. Case studies and capstone work land here as they ship.</p>
+    <nav class="links" aria-label="Links">
+      <a href="https://www.linkedin.com/in/fathima-safva-578294315" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/fsafva13-coder" target="_blank" rel="noopener">GitHub</a>
+      <a href="assets/safva-cv.pdf" target="_blank" rel="noopener">CV</a>
+      <a href="https://calendly.com/fsafva13/30min" target="_blank" rel="noopener">Let's talk</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="note">Portfolio in progress — Work and About next.</div>
   </main>
-
-  <script>
-    const form = document.getElementById('contact-form');
-    const statusEl = document.getElementById('status');
-    const btn = document.getElementById('submit-btn');
-
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault();
-      btn.disabled = true;
-      btn.textContent = 'Sending…';
-      statusEl.className = 'status';
-      statusEl.textContent = '';
-
-      const formData = new FormData(form);
-      const payload = Object.fromEntries(formData.entries());
-
-      try {
-        const res = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify(payload),
-        });
-        const result = await res.json();
-
-        if (result.success) {
-          statusEl.textContent = "Thanks — your message is on its way. I'll get back to you soon.";
-          statusEl.className = 'status ok';
-          form.reset();
-        } else {
-          statusEl.textContent = 'Something went wrong sending that. Please try again in a moment.';
-          statusEl.className = 'status err';
-        }
-      } catch (err) {
-        statusEl.textContent = 'Network error — please try again, or reach out via LinkedIn instead.';
-        statusEl.className = 'status err';
-      } finally {
-        btn.disabled = false;
-        btn.textContent = 'Send message';
-      }
-    });
-  </script>
 </body>
 </html>
