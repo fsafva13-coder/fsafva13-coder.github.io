@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fsafva13-coder.github.io/safva-portfolio/sitemap.xml
+Sitemap: https://fsafva13-coder.github.io/sitemap.xml
